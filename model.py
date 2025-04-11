@@ -6,6 +6,8 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+torch.classes.__path__ = []
+
 MODEL_PATH = getenv("MODEL_PATH")
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 

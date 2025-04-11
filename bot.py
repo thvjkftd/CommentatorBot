@@ -1,5 +1,6 @@
 import asyncio
 import logging
+import torch
 
 from aiogram import Bot, Dispatcher
 from aiogram.filters import Command
@@ -7,6 +8,8 @@ from aiogram.types import Message
 
 from model import generate_comment
 from youtube_api import get_prompt_for_model
+
+torch.classes.__path__ = []
 
 TOKEN = getenv("BOT_TOKEN")
 
