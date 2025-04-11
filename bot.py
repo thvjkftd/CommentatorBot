@@ -11,8 +11,6 @@ from youtube_api import get_prompt_for_model
 
 torch.classes.__path__ = []
 
-TOKEN = getenv("BOT_TOKEN")
-
 GREETING = "Hi! I am Commentator bot."
 HELP = "Send me a YouTube video's URL and I will generate a comment"
 UNIVERSAL_COMMENT = "Who is watching in 2025?"
