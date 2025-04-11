@@ -15,7 +15,6 @@ DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 logger.info("Loading model...")
 tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
-# model = AutoModelForCausalLM.from_pretrained(MODEL_PATH)
 model = AutoModelForCausalLM.from_pretrained(MODEL_PATH, load_in_8bit=True)
 model.to(DEVICE)
 model.eval()
