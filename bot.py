@@ -6,10 +6,14 @@ from aiogram import Bot, Dispatcher
 from aiogram.filters import Command
 from aiogram.types import Message
 
+import streamlit as st
+
 from model import generate_comment
 from youtube_api import get_prompt_for_model
 
 torch.classes.__path__ = []
+
+TOKEN = st.secrets["BOT_TOKEN"]
 
 GREETING = "Hi! I am Commentator bot."
 HELP = "Send me a YouTube video's URL and I will generate a comment"

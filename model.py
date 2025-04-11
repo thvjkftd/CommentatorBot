@@ -3,11 +3,14 @@ import torch
 
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
+import streamlit as st
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 torch.classes.__path__ = []
 
+MODEL_PATH = st.secrets["MODEL_PATH"]
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 logger.info("Loading model...")
